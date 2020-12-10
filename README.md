@@ -1,30 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project of Software Engineering
+## Book Hub
+使用 [Next.js](https://nextjs.org/) 搭建的前端项目，UI框架使用antd，支持mobx进行数据管理。
 
 ## Getting Started
-
-First, run the development server:
-
+建议使用yarn进行包管理。
+1. 首先安装依赖
 ```bash
-npm run dev
+yarn install
 # or
+npm install
+```
+2. 运行项目
+```bash
+yarn run dev
+# or 
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Next.js
+Nextjs中不需要使用路由组件，类似于PHP的路由机制，pages/文件夹即为根目录，路由由其下的文件夹及文件生成。
+动态路由生成规则详见Next.js文档。
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## antd
+Ant-design是一套应用于信息管理的UI库，足够满足本项目的基本需求。
+文档：https://ant.design/docs/react/getting-started-cn
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## mobx
+mobx是一个状态管理和数据管理框架，通过建立数据中心（Store），向组件分发数据（Inject、Observe），数据驱动更新（Computed）以及组件修改数据（Action）接口建立中心化的数据管理流程。
+由于本项目的数据并不复杂，可视情况使用mobx。
+文档：https://cn.mobx.js.org/
