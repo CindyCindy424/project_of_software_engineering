@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react';
 import MyMenu from '../src/components/header/header';
+import SearchBook from '../src/components/SearchBook';
+import BookCard from '../src/components/BookBoard/BookCard';
+function Home(){
+    return (
+        <>       
+            <MyMenu logInfo={true}/>
+            <SearchBook/>
+            <BookCard/>
+        </>
+    )
 
-export default class Home extends Component {
-
-    render() {
-        return (
-            <MyMenu/>
-        )
-    }
 }
-
+export default Home;

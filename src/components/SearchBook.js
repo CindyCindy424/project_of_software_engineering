@@ -8,9 +8,9 @@ const onSearch = value =>console.log(value);
 export default class SearchBook extends Component {
     render(){
         return (<Search
-            placeholder="Search Book!"
+            placeholder="搜索图书"
             allowClear
-            enterButton="Search"
+            enterButton="搜索"
             size="large"
             onSearch={onSearch}
         ></Search>)
