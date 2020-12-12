@@ -28,8 +28,7 @@ function MyMenu() {
       </Menu.Item>
       <Menu.Item
         onClick={()=>{
-          userStore.logout();
-          Router.reload();}}
+          userStore.LogOut()}}
         danger>
         登出</Menu.Item>
     </Menu>
@@ -54,7 +53,7 @@ function MyMenu() {
   return (
     <Menu>
       <Link target="_blank" href="/home">首页</Link>
-      <Dropdown overlay={menu(userStore.isLogin)}>
+      <Dropdown overlay={menu(userStore.isLogin())}>
         <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
           主菜单<DownOutlined />
         </a>

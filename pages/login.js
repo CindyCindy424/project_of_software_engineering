@@ -17,7 +17,7 @@ const tailLayout = {
 
 function Login(){
   const onFinish = values => {
-    userStore.login(values);
+    userStore.Login(values);
     Router.push('/home');
   };
 

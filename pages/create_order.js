@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { observer } from 'mobx-react';
+import Router from 'next/router';
+import { observer, Provider } from 'mobx-react';
 import { Button, Modal } from 'antd';
 
 import userStore from '../src/mobx/stores/AuthStore';
@@ -29,7 +30,7 @@ function CreateOrder() {
 
     return (
         <>
-            
+            <UserAddress/>
             <Button onClick={showModal}>新增地址</Button>
             <BookCard />
             <Modal
@@ -38,7 +39,7 @@ function CreateOrder() {
                 onCancel={handleCancel}
                 footer={[]}
             >
-                <AddressForm />
+                <AddressForm closeModal={handleOk}/>
             </Modal>
 
         </>
@@ -46,3 +47,4 @@ function CreateOrder() {
 
 }
 export default observer(CreateOrder);
+//

@@ -5,7 +5,7 @@ import BookCard from '../src/components/BookBoard/BookCard';
 function Home(){
     return (
         <>       
-            <MyMenu logInfo={true}/>
+            <MyMenu/>
             <SearchBook/>
             <BookCard/>
         </>
