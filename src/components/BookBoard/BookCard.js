@@ -1,24 +1,31 @@
 import { Button, Card } from 'antd';
 import Link from 'next/link';
+import { Router } from 'next/router';
+
+import CartStore from '../../mobx/stores/CartStore';
 
 const { Meta } = Card;
 
-export default function BookCard(){ 
+export default function BookCard({book,action}){ 
   
-  const addCart=()=>{
-    
-  }
 
   return (
-  <Link href='/register'>
+
     <Card
         hoverable
         style={{ width: 240 }}
-        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+        actions={[action]}
+        cover={<Link href='/register'><img alt="example" src={book.image} /></Link>}
     >
-        <Meta title="Europe Street beat" description="www.instagram.com" />
-        <Button
-        >加入购物车</Button>
+          <Link href='/register'>
+            <Meta title={
+            <>
+              <p>{book.name}</p>
+              <p>售价：{book.price*book.discount}</p>
+              <p>库存:{book.inventory}</p>
+            </>
+            } {...book} />
+          </Link>
     </Card>
-  </Link>);
+  );
   }

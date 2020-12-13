@@ -17,12 +17,12 @@ function MyMenu() {
             </Link>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="/">
+        <Link rel="noopener noreferrer" href="/cart">
           购物车
-            </a>
+            </Link>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
+        <a target="_blank" rel="noopener noreferrer" href="/create_order">
           订单管理
             </a>
       </Menu.Item>
